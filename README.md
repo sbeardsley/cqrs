@@ -79,3 +79,5 @@ func main () {
 ```
 
 ## Snippets
+
+vscode [user snippets](https://github.com/sbeardsley/cqrs/blob/main/.vscode/cqrs.code-snippets) are located in the .vscode folder
