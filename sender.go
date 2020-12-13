@@ -17,6 +17,12 @@ type QuerySender interface {
 	RegisterQ(...QueryHandler) error
 }
 
+// Sender is both a query and a command dispatcher
+type Sender interface {
+	CommandSender
+	QuerySender
+}
+
 // InMemorySender is an in memory dispatcher
 type InMemorySender struct {
 	commandHandlers map[string]CommandHandler
