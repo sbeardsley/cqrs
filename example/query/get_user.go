@@ -33,6 +33,6 @@ func (h GetUserHandler) Handle(message interface{}) (interface{}, error) {
 	fmt.Printf("Executing get user handler %v", qry)
 
 	return &User{
-		Username: "sbeardsley",
+		Username: "test_user",
 	}, nil
 }

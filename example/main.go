@@ -3,11 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/sbeardsley/cqrs/example/query"
-
 	"github.com/sbeardsley/cqrs"
-
 	"github.com/sbeardsley/cqrs/example/command"
+	"github.com/sbeardsley/cqrs/example/query"
 )
 
 func main() {
@@ -20,7 +18,7 @@ func main() {
 	dispatcher.Register(cmdHandler)
 	dispatcher.RegisterQ(qryHandler)
 
-	newUser := &command.CreateUser{Username: "sbeardsley", Password: "P@ssw0rd1"}
+	newUser := &command.CreateUser{Username: "test_user", Password: "P@ssw0rd1"}
 
 	err := dispatcher.Send(newUser)
 	if err != nil {
